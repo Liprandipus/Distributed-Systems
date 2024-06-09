@@ -1,0 +1,150 @@
+TEST ONE )
+Server :
+New connection 
+New connection 
+
+Client :
+./calc_client localhost 5 3 1 2 3 4
+The new array after the multiplication is : 
+Number 1 element is 5.000000 
+Number 2 element is 10.000000 
+Number 3 element is 15.000000 
+Number 4 element is 20.000000 
+Do you want to continue (1 yes / 0 no ) 
+1
+Type the size : 
+5
+Type the value a and the choice 
+5
+2
+Give the values of the array
+-1
+2
+8
+90
+30
+Min is -1.000000 and max is 90.000000 
+Do you want to continue (1 yes / 0 no) 
+0
+
+ 
+ 
+ Exiting ... 
+ 
+ 
+ 
+ 
+ 
+ 
+ TEST TWO )
+ 
+Server :
+New connection 
+
+Client :
+./calc_client localhost 5 3 1 2 3 4
+The new array after the multiplication is : 
+Number 1 element is 5.000000 
+Number 2 element is 10.000000 
+Number 3 element is 15.000000 
+Number 4 element is 20.000000 
+Do you want to continue (1 yes / 0 no ) 
+2
+
+ 
+ 
+ Exiting ... 
+ 
+ 
+ 
+ TEST THREE )
+ 
+ // input χωρίς ορίσματα //
+ Client : 
+./calc_client localhost 
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==7690==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7ce90b64b783 bp 0x7ffe8afce940 sp 0x7ffe8afce210 T0)
+==7690==The signal is caused by a READ memory access.
+==7690==Hint: address points to the zero page.
+    #0 0x7ce90b64b783 in __GI_____strtod_l_internal stdlib/strtod_l.c:610
+    #1 0x5743e149c251 in main (/home/lyprandos/DS/this/calc_client+0x3251)
+    #2 0x7ce90b629d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #3 0x7ce90b629e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #4 0x5743e149b3b4 in _start (/home/lyprandos/DS/this/calc_client+0x23b4)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV stdlib/strtod_l.c:610 in __GI_____strtod_l_internal
+==7690==ABORTING
+
+ 
+ // Λόγω του debugger που έβαλα στο makefile //
+ 
+ 
+ 
+ 
+ TEST FOUR )
+Server :
+New connection 
+New connection 
+
+Client :
+./calc_client localhost 60 2 -80 -60 -50 
+Min is -80.000000 and max is -50.000000 
+Do you want to continue (1 yes / 0 no ) 
+1
+Type the size : 
+4
+Type the value a and the choice 
+-2
+3
+Give the values of the array
+-80
+-60
+-70
+-50
+The new array after the multiplication is : 
+Number 1 element is 160.000000 
+Number 2 element is 120.000000 
+Number 3 element is 140.000000 
+Number 4 element is 100.000000 
+Do you want to continue (1 yes / 0 no) 
+1
+Type the size : 
+3
+Type the value a and the choice 
+-60
+3
+Give the values of the array
+-50
+-80
+-90
+The new array after the multiplication is : 
+Number 1 element is 3000.000000 
+Number 2 element is 4800.000000 
+Number 3 element is 5400.000000 
+Do you want to continue (1 yes / 0 no) 
+0
+
+ 
+ 
+ Exiting ...
+ 
+ TEST FIVE )
+ 
+Server :
+New connection 
+
+Client
+./calc_client localhost 0 0 0 0 0 0
+Do you want to continue (1 yes / 0 no ) 
+0
+
+ 
+ 
+ Exiting ...
+
+ ./calc_client localhost 0 0 0 0 0 0
+Do you want to continue (1 yes / 0 no ) 
+
+
